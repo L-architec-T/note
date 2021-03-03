@@ -8,6 +8,9 @@
 1. `curl -sL https://deb.nodesource.com/setup_13.x | bash -`
 2. `apt-get install -y nodejs`
 
+## Install Git
+1. `apt install git`
+
 ## Install apache2
 1. `apt install apache2 php php-json php-mbstring php-zip php-gd php-xml php-curl php-mysql`
 2. `wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/ phpMyAdmin-4.9.0.1-all-languages.zip`
