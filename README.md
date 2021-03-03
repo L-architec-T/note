@@ -11,3 +11,6 @@
 3. `sudo mysql -p`
 4. `CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';`
 5. `GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;`
+
+## Install GTOP
+1. `npm install -g gtop`
