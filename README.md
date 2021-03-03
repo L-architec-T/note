@@ -1,6 +1,9 @@
 ## Remove sudo
 1. `sudo -i`
 
+## Home
+1. `nano /etc/motd`
+
 ## Change language système
 1. `dpkg-reconfigure locales`
 
