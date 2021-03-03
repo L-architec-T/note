@@ -13,7 +13,8 @@
 5. `mv -v /opt/phpMyAdmin-4.9.0.1-all-languages /opt/phpMyAdmin`
 6. `chown -Rfv www-data:www-data /opt/phpMyAdmin`
 7. `nano /etc/apache2/sites-available/phpmyadmin.conf`
-8. ```<VirtualHost *:9000>
+```htlm
+<VirtualHost *:9000>
 ServerAdmin webmaster@localhost
 DocumentRoot /opt/phpMyAdmin
  
@@ -24,7 +25,8 @@ Require all granted
 </Directory>
 ErrorLog ${APACHE_LOG_DIR}/error_phpmyadmin.log
 CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
-</VirtualHost>```
+</VirtualHost>
+```
 
 ## Install MariaDB
 1. `apt install mariadb-server mariadb-client`
