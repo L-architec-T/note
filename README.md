@@ -11,7 +11,7 @@
 ## Install Git
 1. `apt install git`
 
-## Install apache2
+## Install apache2 & PhpMyAdmin
 1. `apt install apache2 php php-json php-mbstring php-zip php-gd php-xml php-curl php-mysql`
 2. `wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/ phpMyAdmin-4.9.0.1-all-languages.zip`
 3. `unzip phpMyAdmin-4.9.0.1-all-languages.zip -d /opt`
@@ -33,6 +33,8 @@ ErrorLog ${APACHE_LOG_DIR}/error_phpmyadmin.log
 CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 </VirtualHost>
 ```
+8. `CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';`
+5. `GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;`
 
 ## Install MariaDB
 1. `apt install mariadb-server mariadb-client`
