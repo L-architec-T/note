@@ -86,3 +86,6 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 3. `sudo mongod --repair --dbpath /var/lib/mongodb`
 4. `sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb`
 5. `sudo systemctl start mongod`
+
+## Dump Mongoose
+1. `mongodump -h 127.0.0.1 -d DATABASE_NAME -o /home`
