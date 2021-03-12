@@ -41,6 +41,7 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 ```
 8. `CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';`
 5. `GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;`
+6. `FLUSH PRIVILEGES;`
 
 ## Install MariaDB
 1. `apt install mariadb-server mariadb-client`
