@@ -60,7 +60,7 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 ## Install GTOP
 1. `npm install -g gtop`
 
-## Msq Safe Mode
+## MySql Safe Mode
 1. etc/init.d/mysql stop
 2. mysqld_safe --skip-grant-tables &
 3. mysql -u root
