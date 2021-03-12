@@ -61,12 +61,28 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 1. `npm install -g gtop`
 
 ## MySql Safe Mode
-1. etc/init.d/mysql stop
-2. mysqld_safe --skip-grant-tables &
-3. mysql -u root
-4. use mysql;
-5. update user set password=PASSWORD("PASSWORD") where user="USERNAME";
-6. flush privileges;
-7. quit
-8. /etc/init.d/mysql stop
-9. /etc/init.d/mysql start
+1. `etc/init.d/mysql stop`
+2. `mysqld_safe --skip-grant-tables &`
+3. `mysql -u root`
+4. `use mysql;`
+5. `update user set password=PASSWORD("PASSWORD") where user="USERNAME";`
+6. `flush privileges;`
+7. `quit`
+8. `/etc/init.d/mysql stop`
+9. `/etc/init.d/mysql start`
+
+## Install Mongoose
+1. `sudo apt-get install gnupg`
+2. `wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -`
+3. `echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | sudo tee` 
+4. `/etc/apt/sources.list.d/mongodb-org-4.4.list`
+5. `sudo apt-get update`
+6. `sudo apt-get install -y mongodb-org`
+7. `sudo systemctl start mongod`
+
+## Repair Mongoose
+1. `sudo systemctl stop mongod`
+2. `sudo rm /var/lib/mongodb/mongod.lock`
+3. `sudo mongod --repair --dbpath /var/lib/mongodb`
+4. `sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb`
+5. `sudo systemctl start mongod`
