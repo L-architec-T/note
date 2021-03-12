@@ -59,3 +59,14 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 
 ## Install GTOP
 1. `npm install -g gtop`
+
+## Msq Safe Mode
+1. etc/init.d/mysql stop
+2. mysqld_safe --skip-grant-tables &
+3. mysql -u root
+4. use mysql;
+5. update user set password=PASSWORD("PASSWORD") where user="USERNAME";
+6. flush privileges;
+7. quit
+8. /etc/init.d/mysql stop
+9. /etc/init.d/mysql start
