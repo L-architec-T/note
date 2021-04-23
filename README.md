@@ -49,7 +49,7 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 3. `systemctl start mariadb`
 4. `mysql_secure_installation`
 5. `mysql -u (username) -p`
-6. `GRANT ALL ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';`
+6. `GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';`
 
 ## Install PhpMyAdmin
 1. `sudo apt install phpmyadmin`
@@ -62,7 +62,7 @@ CustomLog ${APACHE_LOG_DIR}/access_phpmyadmin.log combined
 1. `npm install -g gtop`
 
 ## MySql Safe Mode
-1. `etc/init.d/mysql stop`
+1. `/etc/init.d/mysql stop`
 2. `mysqld_safe --skip-grant-tables &`
 3. `mysql -u root`
 4. `use mysql;`
